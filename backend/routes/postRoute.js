@@ -18,4 +18,11 @@ router.put("/:id", (req, res) => {
   });
 });
 
+router.delete("/:id", (req, res) => {
+  console.log(req.body);
+  res.json({
+    message: "Post id : " + req.params.id + " supprimé",
+  });
+});
+
 module.exports = router;
