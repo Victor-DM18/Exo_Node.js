@@ -10,4 +10,12 @@ router.post("/", (req, res) => {
   res.json({ message: req.body.message });
 });
 
+router.put("/:id", (req, res) => {
+  console.log(req.body);
+  res.json({
+    messageId: req.params.id,
+    nessage: req.body.newMessage,
+  });
+});
+
 module.exports = router;
