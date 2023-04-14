@@ -6,12 +6,10 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  console.log(req.body);
   res.json({ message: req.body.message });
 });
 
 router.put("/:id", (req, res) => {
-  console.log(req.body);
   res.json({
     messageId: req.params.id,
     nessage: req.body.newMessage,
@@ -19,9 +17,14 @@ router.put("/:id", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-  console.log(req.body);
   res.json({
     message: "Post id : " + req.params.id + " supprimé",
+  });
+});
+
+router.patch("/postLike/:id", (req, res) => {
+  res.json({
+    message: "Post id : " + req.params.id + " liké",
   });
 });
 
