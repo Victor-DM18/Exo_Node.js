@@ -28,4 +28,10 @@ router.patch("/postLike/:id", (req, res) => {
   });
 });
 
+router.patch("/postDislike/:id", (req, res) => {
+  res.json({
+    message: "Post id : " + req.params.id + " disliké",
+  });
+});
+
 module.exports = router;
